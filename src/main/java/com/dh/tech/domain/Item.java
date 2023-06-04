@@ -3,7 +3,6 @@ package com.dh.tech.domain;
 import lombok.Data;
 
 @Data
-//@ScriptAssert(lang = "javascript", script = "_this.price * _ this.quantity >= 10000", message = "총합이 만원이 넘어가게 입력해주세요.")
 public class Item {
 
     private Long id;
