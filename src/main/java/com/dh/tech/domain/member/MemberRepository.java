@@ -1,7 +1,10 @@
 package com.dh.tech.domain.member;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.*;
 
+@Repository
 public class MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();

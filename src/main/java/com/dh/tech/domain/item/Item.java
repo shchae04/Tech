@@ -1,4 +1,4 @@
-package com.dh.tech.domain;
+package com.dh.tech.domain.item;
 
 import lombok.Data;
 
