@@ -1,1 +1,4 @@
-* °èÃþÇü±¸Á¶ -> µµ¸ÞÀÎÇü ÆÐÅ°Áö ±¸Á¶
+DH TECH Project
+
+AWS EC2 ì¸ìŠ¤í„´ìŠ¤ì—ì„œ êµ¬ë™
+
