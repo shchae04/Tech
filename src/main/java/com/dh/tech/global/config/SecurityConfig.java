@@ -18,11 +18,13 @@ public class SecurityConfig {
                         .anyRequest().authenticated() // 모든 요청은 인증받아야 함.
                 )
                 .formLogin(login -> login
-                        .defaultSuccessUrl("/viewName", true)
+                        .loginPage("/login/loginHome")
+                        .usernameParameter("userid")
+                        .passwordParameter("pw")
+                        .defaultSuccessUrl("/login/dashboard",true)
                         .permitAll()
                 )
                 .logout(Customizer.withDefaults()); // 로그아웃은 기본값 /logout Post
-
         return security.build();
     }
 }
