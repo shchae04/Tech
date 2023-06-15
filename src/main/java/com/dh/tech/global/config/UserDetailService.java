@@ -25,9 +25,9 @@ public class UserDetailService implements UserDetailsService {
         Member member = findOne.orElseThrow(() -> new UsernameNotFoundException("존재하지 않는 회원입니다."));
 
         return User.builder()
-                .username(member.getLoginId())
-                .password(member.getPassword())
-                .roles(member.getMemberRoles())
+                .username(member.getUserid())
+                .password(member.getPw())
+                .roles(member.getRoles())
                 .build();
     }
 }

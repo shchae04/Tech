@@ -1,18 +1,47 @@
 package com.dh.tech.domain.member;
 
-import lombok.Data;
+import jakarta.persistence.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import javax.management.relation.Role;
-
-@Data
+@Entity
 public class Member {
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
-    private String loginId;
-    private String password;
-    private String memberRoles;
 
+    @Column(unique = true)
+    private String userid;
 
+    private String pw;
 
+    private String roles;
+
+    private Member(Long id, String userid, String pw, String roleUser) {
+        this.id = id;
+        this.userid = userid;
+        this.pw = pw;
+        this.roles = roleUser;
+    }
+
+    protected Member() {}
+
+    public static Member createUser(String userId, String pw, PasswordEncoder passwordEncoder) {
+        return new Member(null, userId, passwordEncoder.encode(pw), "USER");
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getUserid() {
+        return userid;
+    }
+
+    public String getPw() {
+        return pw;
+    }
+
+    public String getRoles() {
+        return roles;
+    }
 }
