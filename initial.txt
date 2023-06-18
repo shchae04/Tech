@@ -2,3 +2,4 @@ DH TECH Project
 
 AWS EC2 인스턴스에서 구동
 
+VIEW 화면 추가
